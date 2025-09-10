@@ -16,10 +16,10 @@
   <body>
     <h1 id="text">Calcule sua Média</h1>
 
-    <input type="text" id="nota1" placeholder="Digite a primeira nota..." />
+    <input type="number" id="nota1" placeholder="Digite a primeira nota..." />
 
-    <input type="text" id="nota2" placeholder="Digite a segunda nota..." />
-    <input type="text" id="nota3" placeholder="Digite sua nota do PIM..." />
+    <input type="number" id="nota2" placeholder="Digite a segunda nota..." />
+    <input type="number" id="nota3" placeholder="Digite sua nota do PIM..." />
 
     <button onclick="calcularmedia()">Calcular</button>
     
@@ -30,8 +30,9 @@
   function calcularmedia() {
     var nota1 = parseFloat(document.getElementById("nota1").value);
     var nota2 = parseFloat(document.getElementById("nota2").value);
-    var media = (nota1 + nota2) / 2;
-    if (media > 7) {
+    var nota3 = parseFloat(document.getElementById("nota3").value);
+    var media = (nota1 + nota2 + nota3) / 3;
+    if (media >= 7) {
       alert("Aprovado");
     } else {
       alert("Reprovado");
