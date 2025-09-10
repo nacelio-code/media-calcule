@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>calculeNota</title>
+    <link rel="icon" href="./img/calcule.png" type="image/x-icon" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cossette+Titre:wght@400;700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <h1 id="text">Calcule sua Média</h1>
+
+    <input type="text" id="nota1" placeholder="Digite a primeira nota..." />
+
+    <input type="text" id="nota2" placeholder="Digite a segunda nota..." />
+    <input type="text" id="nota3" placeholder="Digite sua nota do PIM..." />
+
+    <button onclick="calcularmedia()">Calcular</button>
+    
+    <h3 id="Resulted"></h3>
+  </body>
+</html>
+<script>
+  function calcularmedia() {
+    var nota1 = parseFloat(document.getElementById("nota1").value);
+    var nota2 = parseFloat(document.getElementById("nota2").value);
+    var media = (nota1 + nota2) / 2;
+    if (media > 7) {
+      alert("Aprovado");
+    } else {
+      alert("Reprovado");
+    }
+    document.getElementById("Resulted").innerText =
+      "A media é: " + media.toFixed(2);
+  }
+</script>

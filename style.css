@@ -1,0 +1,88 @@
+/* Garante que a página ocupe toda a altura da tela */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+/* Corpo da página */
+body {
+    display: flex;
+    justify-content: center;  /* centraliza horizontal */
+    align-items: center;      /* centraliza vertical */
+    flex-direction: column;   /* coloca elementos em coluna */
+    background: url(./img/school.jpg); /* cor de fundo (troque se quiser) */
+    font-family: 'Inter', sans-serif;
+    text-align: center;
+}
+
+/* Estilo do título */
+h1 {
+    margin-bottom: 20px;
+    color: rgb(241, 226, 7);
+    font-family: 'Cossette Titre', sans-serif;
+    font-size: 40px;
+    text-shadow: black 1px 1px 2px;
+    
+}
+
+/* Estilo dos inputs */
+input{
+    padding: 10px;
+    margin: 5px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    background-color: black;
+    color: white;
+    border: 2px solid gray;
+    outline: none;
+
+}
+
+input:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+
+/* Estilo do botão */
+button {
+    padding: 10px 20px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 8px;
+    background-color: #007bff;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+/* Resultado */
+#Resulted {
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    text-shadow: black 1px 1px 2px;
+}
+
+@media (max-width: 600px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    input[type="text"], button {
+        font-size: 0.9rem;
+        padding: 8px;
+    }
+}
